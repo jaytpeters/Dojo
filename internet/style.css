@@ -1,0 +1,256 @@
+body * {
+    font-family: Arial;
+}
+
+h1 {
+    width: 500px;
+    display: inline-block;
+    vertical-align: bottom;
+    font-family: Arial;
+    font-size: 48px;
+    margin: 0px;
+    padding-bottom: 30px;
+}
+    
+h2 {
+    width: 950px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    display: block;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h3 {
+    display: inline-block;
+    margin: 0px 0px 3px 0px;
+    padding: 0px;
+    font-size: 24px;
+}
+
+h4 {
+    color: #2c6ba2;
+    margin: 0px 0px 3px 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    margin: 0px 0px 10px 0;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: #2c6ba2;
+}
+
+.lightblue {
+    color: #42c0de;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+a {
+    
+}
+
+.button {
+    margin-top: 20px;
+    display: block;
+    height: 100px;
+    width: 200px;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.smallButton {
+    display: block;
+    height: 100px;
+    width: 200px;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    margin: 10px auto;
+}
+
+.blueButton {
+    width: 200px;
+    height: 30px;
+    display: block;
+    padding-top: 10px;
+    background-color: blue;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.orangeButton {
+    width: 200px;
+    height: 30px;
+    display: block;
+    padding-top: 10px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.lightBlueButton {
+    width: 150px;
+    height: 17px;
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #44c8df;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+.container {
+    width: 970px;
+    height: 800px;
+}
+
+.title {
+    width: 970px;
+    height: 80px;
+    vertical-align: top;
+}
+    .title img {
+        width: 100px;
+        margin: 0px;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+.main {
+    width: 970px;
+    height: 500px;
+    background-image: linear-gradient(#e3e3e3, white);
+}
+
+.nav {
+    width: 200px;
+    height: 300px;
+    min-height: 300px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: top;
+    margin-right: 40px;
+}
+
+    .nav .ad {
+        height: 300px;
+        margin-top: 20px;
+        display: inline-block;
+        background-image: url("images/ad_background.png");
+        color: white;
+        text-align: center;
+        vertical-align: top;
+    }
+
+        .nav .ad p {
+            padding: 20px 10px 0px 10px;
+            margin-bottom: 0px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 100;
+        }
+
+        .nav .ad img {
+            width: 90px;
+            margin: auto;
+            display: block;
+        }
+
+.body {
+    display: inline-block;
+    width: 700px;
+    height: 500px;
+}
+
+    .body img {
+        width: 250px;
+        text-align: center;
+    }
+
+    .body ul {
+        margin: 10px 0px 0px 0px;
+    }
+
+        .body ul li {
+            font-size: 14px;
+        }
+
+    .body hr {
+        width: 695px;
+    }
+
+    .bodyTop {
+        width: 750px;
+        vertical-align: top;
+    }
+
+    .bodyTopNav {
+        width: 60px;
+        margin-top: 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .bodyTopNav img {
+        width: 20px;
+        display: inline-block;
+    }
+
+    .bodyTopContact {
+        width: 630px;
+        height: 70px;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+        font-size: 10px;
+        margin-right: 20px;
+    }
+
+        .bodyTopContact img {
+            width: 45px;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .bodyTopContact p {
+            margin-top: 0px;
+            margin-bottom: 3px;
+        }
+
+        .bodyTopContact .contactInfo {
+            height: 50px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+    .bottomBox {
+
+    }
+
+
+
