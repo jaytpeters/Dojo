@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Form Test Index</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="form_container">
+            <form action='/process' method='post'>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    {% for message in messages %}
+                      <p class="error">{{message}}</p>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+                <p>
+                    <label for='name'>Your Name:</label>
+                    <input type='text' name='name' id='name' value="{{request.form['name']}}">                
+                </p>
+                <p>
+                    <label for='location'>Dojo Location:</label>
+                    <select name='location'>
+                        <option value='San Jose' {% if request.form['location'] == 'San Jose': %} selected {% endif %}>San Jose</option>
+                        <option value='Livermore' {% if request.form['location'] == 'Livermore': %} selected {% endif %}>Livermore</option>
+                        <option value='San Diego' {% if request.form['location'] == 'San Diego': %} selected {% endif %}>San Diego</option>
+                    </select>
+                </p>
+                <p>
+                    <label for='language'>Favorite Language:</label>
+                    <select name='language'>
+                        <option value='Python' {% if request.form['language'] == 'Python' %} selected {% endif %}>Python</option>
+                        <option value='Java'  {% if request.form['language'] == 'Java' %} selected {% endif %}>Java</option>
+                        <option value='Swift'  {% if request.form['language'] == 'Swift' %} selected {% endif %}>Swift</option>
+                    </select>
+                </p>
+                <p>
+                    <label for='comment'>Comment (required):</label>
+                    <textarea name='comment' id='comment' class="form-control" rows="5">{{ request.form['comment'] }}</textarea>
+                </p>
+                <input class='btn btn-primary' type='submit' value='Button'>
+            </form>        
+        </div>
+    </body>
+</html>

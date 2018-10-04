@@ -1,0 +1,47 @@
+body {
+    margin: 100px;
+    font-size: 14px;
+}
+
+.container {
+    margin: auto;
+    width: 1200px;
+}
+
+.building {
+    width: 200px;
+    height: 200px;
+    border: 1px darkblue dotted;
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+}
+
+.building h1 {
+    font-size: 20px;
+    font-family: Verdana;
+    color: gold;
+    margin-top: 10px;
+}
+
+.building h2 {
+    font-size: 14px;
+    color: darkgray;
+    margin-bottom: 50px;
+}
+
+form {
+    display: inline-block;
+}
+
+p {
+    margin-left: 20px;
+}
+
+.earned {
+    color: green;
+}
+
+.lost {
+    color: red;
+}

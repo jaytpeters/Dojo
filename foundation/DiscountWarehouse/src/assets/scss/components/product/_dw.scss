@@ -1,0 +1,41 @@
+.dw-product-name {
+    font-size: 24px;
+    color: rgb(68, 68, 68);
+}
+
+.dw-product-short-description {
+    color: rgb(78, 18, 0);
+}
+
+.dw-product-long-description {
+    color: rgb(170, 42, 3);
+}
+
+.dw-product-header-grid {
+    margin-bottom: 20px;
+}
+
+.dw-product-img-lg {
+    display: block;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.dw-product-option-img {
+    width: 40px;
+    padding: 3px;
+}
+    
+    .dw-product-option-img:hover {
+        outline: 1px solid blue;
+    }
+
+.dw-product-options-colors-text {
+    font-size: 10px;
+    margin: 0px;
+}
+
+.dw-product-options-cell {
+    outline: 1px solid rgb(206, 206, 206);
+    padding: 10px;
+}

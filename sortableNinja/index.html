@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style>
+            #draggable { width: 300px; height: 100px; border: 0px; }
+            .draggable2 { top: 0px; left: 0px; width: 300px; height: 100px; border: 0px; }
+            .droppable { width: 300px; height: 100px; padding: 0.5em; }
+            img { width: 300px; height: 100px; }
+        </style>
+        <script>
+            $( function() {
+                var dragging = null;
+                var dragPos = null;
+
+                $( ".draggable2" ).draggable({ 
+                    axis: "y", 
+                    snap: ".draggable2",
+                    start: function() {
+                        dragging = $(this);
+                        dragPos = $(this).position();
+                    } 
+                });
+                $( "#draggable" ).draggable();
+                $( ".droppable" ).droppable({
+                    accept: ".draggable2",
+                    classes: {
+                        "ui-droppable-active": "ui-state-active",
+                        "ui-droppable-hover": "ui-state-hover"
+                    },
+                    drop: function( event, ui ) {
+                        $(dragging).css({top: $(this).position().top + 'px'});
+                        $(this).css({top: dragPos.top + 'px'});
+                    }
+                });
+            } );
+        </script>
+        </head>
+    <body>
+        <img class="droppable draggable2" src="sort1.png" style="position: absolute; top: 50px; left: 50px;"/>
+        <img class="droppable draggable2" src="sort2.png" style="position: absolute; top: 150px; left: 50px;"/>
+        <img class="droppable draggable2" src="sort3.png" style="position: absolute; top: 250px; left: 50px;"/>
+        <img class="droppable draggable2" src="sort4.png" style="position: absolute; top: 350px; left: 50px;"/>
+        <img class="droppable draggable2" src="sort5.png" style="position: absolute; top: 450px; left: 50px;"/>
+    </body>
+</html>

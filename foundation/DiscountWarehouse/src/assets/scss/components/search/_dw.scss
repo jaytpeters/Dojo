@@ -1,0 +1,63 @@
+$logo_color: rgb(167, 122, 72);
+$ad_color: rgb(191, 207, 209);
+$outline_color: rgb(140, 178, 196);
+$footer_color: rgb(46, 46, 46);
+$product_outline_color: red;
+
+
+.dw-search-header {
+    font-size: 36px;
+}
+
+.dw-search-term {
+    font-style: italic;
+    color: blue;
+}
+
+.dw-search-text {
+    font-size: 32px;
+    color: rgb(53, 53, 53);
+}
+
+.dw-search-result-count {
+    font-weight: bold;
+}
+
+.dw-search-info {
+    background-color: rgb(240, 240, 240);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.dw-search-result-cell {
+    margin: 20px;
+    vertical-align: top;
+}
+
+.dw-search-result-row:hover {
+    outline: 1px solid blue;
+    cursor: grab;
+}
+
+.dw-search-result-img {
+    width: 100px;
+}
+
+.dw-search-result-title {
+    font-size: 18px;
+    color: rgb(56, 56, 56);
+    margin-bottom: 0px;
+}
+
+.dw-search-result-title:hover {
+    color: blue;
+}
+
+.dw-search-result-desc {
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+}
+
+.dw-search-result-update-quantities {
+    text-align: right;
+}

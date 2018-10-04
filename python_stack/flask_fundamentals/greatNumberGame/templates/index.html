@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Form Test Index</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="form_container">
+            <form action='/guess' method='post'>
+                <h1>
+                    Welcome to the Great Number Game!
+                </h1>
+                <p>
+                    I am thinking of a number between 1 and 100.<br/>
+                    Take a guess!
+                </p>
+                {% if 'guess' in session: %}
+                    {% if session['guess'] != session['number']: %}
+                        <div class="wrongGuess">
+                            {% if session['guess'] < session['number']: %}
+                                Guess too low
+                            {% else: %}
+                                Guess too high
+                            {% endif %}
+                        </div>
+                        <input type="text" name="guess"/>
+                        <input class="btn btn-primary" type="submit" value="Submit"/>
+                    {% else %}
+                        <input type="hidden" name="action" value="reset"/> 
+                        <div class="correctGuess">
+                            You are correct! The number is {{ session['number'] }}
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Try Again"/>
+                        {% endif %}
+                {% else: %}
+                    <input type="text" name="guess"/>
+                    <input class="btn btn-primary" type="submit" value="Submit"/>
+                {% endif %}
+            </form>        
+        </div>
+    </body>
+</html>

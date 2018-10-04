@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <script>
+            $(document).ready(function() {
+                $('img').click(function() {
+                    var src = $(this).attr('src');
+                    console.log($(this));
+                    $(this).attr('src', $(this).attr('data-alt-src'));
+                    $(this).attr('data-alt-src',src);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <img src="cat0.png" data-alt-src="ninja0.png"/>
+            <img src="cat1.png" data-alt-src="ninja1.png"/>
+            <img src="cat2.png" data-alt-src="ninja2.png"/>
+            <img src="cat3.png" data-alt-src="ninja3.png"/>
+            <img src="cat4.png" data-alt-src="ninja4.png"/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Template Test</title>
+        <style type="text/css">
+            h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 100%;
+                text-align: center;
+            }
+
+            .blueBox {
+                background-color: {{color}};
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome!</h1>
+            {% for i in range(0,repeat): %}
+            <div class="blueBox"></div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

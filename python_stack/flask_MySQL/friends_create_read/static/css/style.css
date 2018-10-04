@@ -1,0 +1,17 @@
+h2 {
+    margin-top: 10px;
+    color: white;
+}
+
+.btn-custom {
+    background-color: greenyellow;
+}
+
+label {
+    width: 150px;
+    color: black; 
+}
+
+.mr-5 {
+    margin-bottom: 10px;
+}

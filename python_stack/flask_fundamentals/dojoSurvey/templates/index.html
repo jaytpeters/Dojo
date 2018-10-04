@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Form Test Index</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="form_container">
+            <form action='/result' method='post'>
+                <p>
+                    <label for='name'>Your Name:</label>
+                    <input type='text' name='name' id='name'>                
+                </p>
+                <p>
+                    <label for='location'>Dojo Location:</label>
+                    <select name='location'>
+                        <option value='San Jose'>San Jose</option>
+                        <option value='Livermore'>Livermore</option>
+                        <option value='San Diego'>San Diego</option>
+                    </select>
+                </p>
+                <p>
+                    <label for='language'>Favorite Language:</label>
+                    <select name='language'>
+                        <option value='Python'>Python</option>
+                        <option value='Python'>Java</option>
+                        <option value='Python'>Swift</option>
+                    </select>
+                </p>
+                <p>
+                    <label for='comment'>Comment (optional):</label>
+                    <textarea name='comment' id='comment' rows=5></textarea>
+                </p>
+                <input class='btn btn-primary' type='submit' value='Button'>
+            </form>        
+        </div>
+    </body>
+</html>

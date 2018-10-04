@@ -1,0 +1,95 @@
+$logo_color: rgb(167, 122, 72);
+$ad_color: rgb(191, 207, 209);
+$outline_color: rgb(140, 178, 196);
+$footer_color: rgb(46, 46, 46);
+$product_outline_color: red;
+
+.shopping-cart {
+    width: 25px;
+    margin-right: 20px;
+}
+
+.dw-nav-logo {
+    font-size: 30px;
+    font-weight: 50;
+}
+
+.advertisement {
+    display: block;
+}
+
+.footer {
+    background-color: $footer_color;
+    text-align: center;
+    vertical-align: none;
+
+    span {
+        color: white;
+    }
+}
+
+.dw-nav-logo-sub {
+    margin-top: 50px;
+}
+
+li a.menu-text.dw-nav-logo-text {
+    margin-top: 40px;
+    font-size: 28px;
+    color: $logo_color;
+}
+
+.main-grid {
+    margin: 20px;
+}
+.dw-nav-left {
+    outline: 1px solid $outline_color;
+}
+
+.dw-body {
+    outline: 1px solid $outline_color;
+    padding: 20px;
+    font-family: Arial;
+
+    .dw-body-header {
+        font-size: 24px;
+        color: rgb(233, 160, 51);        
+    }
+
+    .dw-body-text {
+        font-size: 18px;
+    }
+}
+
+.advertisement {
+    display: block;
+    outline: 1px solid $outline_color;
+    margin-bottom: 20px;
+    animation: blinker 1s linear infinite;
+    text-align: center;
+    padding: 30px;
+    background-color: $ad_color;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.dw-search-button {
+    background-color: $logo_color;
+}
+
+.dw-product-body {
+    border: 1px solid $product_outline_color;
+    padding: 10px;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 12px;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.dw-map {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <style>
+            input[type=text] {
+                display: block;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                $('form').submit(function () {
+                    
+                    var errorString = [];
+
+                    if($('#name').val() == "")
+                        errorString.push("Name must have a value");
+                    if($('#datepicker1').val() == "")
+                        errorString.push("Start date must have a value");
+                    if($('#datepicker2').val() == "")
+                        errorString.push("End date must have a value");
+
+                    var alertText = "";
+
+                    for (var val in errorString)
+                         alertText += errorString[val] + "\n";
+
+                    if(errorString.length > 0) {
+                        alert(alertText);
+                        return false;
+                    }
+                        
+                    alert("Congratulations, " + $('#name').val() + "! You have claimed your trip for 2 to the Bahamas.  Your flight will leave on " + $('#datepicker1').val() + " and return on " + $('#datepicker2').val() + ".")
+                    return false;
+                });
+
+                $( ".datepicker" ).datepicker();
+            })
+        </script>
+    </head>
+
+    <body>
+        <form method="POST" action="nothing">
+            <label for="datepicker1">Start date</label>
+            <input type="text" id="datepicker1" name="datepicker1" class="datepicker"/>
+            <label for="datepicker2">End date</label>
+            <input type="text" id="datepicker2" name="datepicker2" class="datepicker"/>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"/>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

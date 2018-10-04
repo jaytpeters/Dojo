@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script>        
+            $(document).ready(function(){
+                for(var i = 1; i <= 26; i ++) {
+                    $('#pokelist').append("<div id='pokerow" + i + "' class='pokerow'>");
+                    for(var j = 1; j <= 6; j ++) {
+                        $('#pokerow' + i).append("<div id='pokecol" + j + "'></div>");
+                        if(i == 26 && j > 1)
+                            break;
+                    }
+                    $('#pokelist').append("</div>");
+                }
+
+                for(var i = 1; i <= 151; i++) {
+                    $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(res) {                        
+                        var id = res.id;
+
+                        if(id == 1)
+                        console.log(res);
+                        var row = "#pokerow" + Math.ceil(id / 6);
+                        var col = "";
+                            
+                        if(id % 6 == 0)
+                            col = "#pokecol6";
+                        else
+                            col = "#pokecol" + (id % 6);
+
+                        var typesArray = [];
+
+                        for(var type in res.types)
+                            typesArray.push(res.types[type].type.name);
+                            
+                        $(row + ' ' + col).html("<img class='pokeimg' src='" + res.sprites['front_shiny'] + "' attr-name='" + res.name + "' attr-weight='" + res.weight + "' attr-height='" + res.height + "' attr-types='" + typesArray.toString() + "'/>");
+                    }, "json");
+                }
+
+                $(document.body).on('click', '.pokeimg' ,function(){
+                    $('#pokepreview').attr("src",  $(this).attr("src"));
+                    $('h1').html($(this).attr("attr-name"));
+                    $('#weight').html("Weight: " + $(this).attr("attr-weight"));
+                    $('#height').html("Height: " + $(this).attr("attr-height"));
+                    var typesArray = $(this).attr("attr-types").split(",");
+
+                    $('#poketypes').html("");
+
+                    for(var i in typesArray)
+                        $('#poketypes').append("<li>" + typesArray[i] + "</li>");
+                });
+
+            })
+
+        </script>  
+
+        <style type="text/css">
+            div { display: inline-block; }
+            div#pokerow { display: block; }
+            div#pokerow:hover { border: 2px sold red;}
+            div#pokelist {
+                width : 700px;
+                display: inline-block;
+            }
+            div#pokeinfo {
+                width: 200px;
+                border: 10px solid red;
+                vertical-align: top;
+            }
+            h1 {
+                text-align: center;
+                font-family: Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="pokelist">
+
+        </div>
+        <div id="pokeinfo" style="vertical-align: top">
+            <h1>Name</h1>
+            <img id="pokepreview" src=""/>
+            Types<br/>
+            <ul id="poketypes">
+            </ul>
+            <h2 id="height">Height</h2>
+            <h2 id="weight">Weight</h2>
+        </div>
+    </body>
+</html>

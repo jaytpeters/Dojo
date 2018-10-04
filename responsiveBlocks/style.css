@@ -1,0 +1,98 @@
+body * {
+    margin: auto;
+    font-size: 0px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.greenBox {
+    background-color: green;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.blueBox {
+    background-color: blue;
+    height: 50px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.redBox {
+    background-color: red;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.yellowBox {
+    background-color: yellow;
+    height: 100px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.purpleBox {
+    background-color: purple;
+    height: 50px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .sm-0 {
+        display: none;
+    }
+
+    .sm-4 {
+        width: 100%;
+    }
+
+    .yellowBox {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .med-0 {
+        display: none
+    }
+
+    .med-4 {
+        width: 100%;
+    }
+
+    .med-2 {
+        width: 48%;
+    }
+
+    .yellowBox {
+        display: inline-block;
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .med-0 {
+        display: none;
+    }
+
+    .lg-4 {
+        width: 100%;
+    }
+
+    .lg-3 {
+        width: 75%;
+    }
+
+    .lg-1 {
+        width: 20%;
+        display: inline-block;
+    }
+
+    .yellowBox {
+        width: 30%;
+        display: inline-block;
+    }
+}

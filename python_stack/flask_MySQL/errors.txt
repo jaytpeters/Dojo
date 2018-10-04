@@ -1,0 +1,7 @@
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+	- Changed password
+AttributeError: 'MySQLConnection' object has no attribute 'connection'
+	- Removed self.connection = connection
+Something went wrong (1146, "Table 'sakila.users' doesn't exist")
+	- Changed connection string to point to different database
+

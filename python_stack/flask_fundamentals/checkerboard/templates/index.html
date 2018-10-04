@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Checkerboard</title>
+        <style type="text/css">
+            body {
+                font-size: 0%;
+            }
+
+            .fillSquare {
+                background-color: black;
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+            }
+
+            .emptySquare {
+                background-color: red;
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        {% for y in range(height): %}
+            {% for x in range(width): %}
+                {% if (x % 2 == 0 and y % 2 == 0) or (x % 2 == 1 and y % 2 == 1): %}
+                    <div class="emptySquare"></div>
+                {% else: %}
+                    <div class="fillSquare"></div>
+                {% endif %}
+            {% endfor %}
+            <div></div>
+        {% endfor %}
+    </body>
+</html>

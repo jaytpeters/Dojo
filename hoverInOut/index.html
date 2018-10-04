@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            function displayImages() {
+                for(var i = 0; i < 4; i++)
+                    $('.images').append('<img src="unicorn.jpg"/>');
+            }
+
+            $(document).ready(function () {
+                displayImages();
+                $('img').hover(function () {
+                    $(this).attr('src','angryPoop.jpg');
+                }, function () {
+                    $(this).attr('src','unicorn.jpg');
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div class="images"></div>
+    </body>
+</html>
